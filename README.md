@@ -47,3 +47,18 @@ db.flightData.insertMany([
   }
 ]);
 ```
+
+### **Query all documents without formatting**
+```
+db.flightData.find();
+```
+
+### **Query all documents with formatting**
+```
+db.flightData.find().pretty();
+```
+
+### **Query one document**
+```
+db.flightData.find({departureAirport: "MUC"});
+```
