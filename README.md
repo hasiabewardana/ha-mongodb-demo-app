@@ -13,5 +13,17 @@ show dbs
 
 ## **Connect to a specific db**
 ```
-user testdb
+user flights
+```
+
+## **Basic CRUD operations**
+### Insert a document into a collection
+```
+db.flightData.insertOne({
+    "departureAirport": "MUC",
+    "arrivalAirport": "SFO",
+    "aircraft": "Airbus A380",
+    "distance": 12000,
+    "intercontinental": true
+  });
 ```
