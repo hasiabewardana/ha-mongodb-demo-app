@@ -17,7 +17,7 @@ user flights
 ```
 
 ## **Basic CRUD operations**
-### Insert a document into a collection
+### **Insert a document into a collection**
 ```
 db.flightData.insertOne({
     "departureAirport": "MUC",
@@ -26,4 +26,24 @@ db.flightData.insertOne({
     "distance": 12000,
     "intercontinental": true
   });
+```
+
+### **Insert multiple documents into a collection**
+```
+db.flightData.insertMany([
+  {
+    "departureAirport": "MUC",
+    "arrivalAirport": "SFO",
+    "aircraft": "Airbus A380",
+    "distance": 12000,
+    "intercontinental": true
+  },
+  {
+    "departureAirport": "LHR",
+    "arrivalAirport": "TXL",
+    "aircraft": "Airbus A320",
+    "distance": 950,
+    "intercontinental": false
+  }
+]);
 ```
