@@ -62,6 +62,9 @@ db.flightData.find().pretty();
 ```
 db.flightData.findOne({departureAirport: "MUC"});
 ```
+```
+db.flightData.findOne({distance: {$gt: 10000}});
+```
 
 ### **Update all documents**
 ```
@@ -86,4 +89,14 @@ db.flightData.updateOne({departureAirport: "MUC"}, {$set: {details: {pilot: "Jam
 ### **Update first matching document with additional data of array**
 ```
 db.flightData.updateOne({transits: "Duabai"}, {$set: {transits: ["London", "Montrial"]}});
+```
+
+### **Delete first matching document***
+```
+db.flightData.deleteOne({departureAirport: "MUC"});
+```
+
+### **Delete all documents**
+```
+db.flightData.deleteMany({});
 ```
